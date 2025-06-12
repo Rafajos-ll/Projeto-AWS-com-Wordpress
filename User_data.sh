@@ -18,7 +18,7 @@ cd efs-utils
 sudo apt-get -y install ./build/amazon-efs-utils*deb
 
 sudo mkdir -p /mnt/efs
-sudo mount -t efs -o tls fs-0e393bc2c3d3fc5be:/ /mnt/efs
+sudo mount -t nfs4 -o nfsvers=4.1 fs-<ID_DO_EFS>.efs.<REGIÃO>.amazonaws.com:/ /mnt/efs
 
 cd /home/ubuntu
 
